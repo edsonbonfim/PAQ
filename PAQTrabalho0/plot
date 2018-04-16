@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+import sys
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(sys.argv[1], index_col='bits').sort_index()
+df.plot(figsize=(10, 5), title='Frequencia em cada numero de 16 bits')
+plt.savefig(sys.argv[1][:-4] + ".png")
+print("Arquivo gerado: " + sys.argv[1][:-4] + ".png")

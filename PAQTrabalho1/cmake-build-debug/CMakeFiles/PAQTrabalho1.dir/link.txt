@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/PAQTrabalho1.dir/main.c.o  -o PAQTrabalho1 /home/xyz/gc/lib/libgc.a 

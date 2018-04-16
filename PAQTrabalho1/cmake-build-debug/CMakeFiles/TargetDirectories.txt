@@ -1,0 +1,3 @@
+/home/edsononildo/Desktop/PAQ/PAQTrabalho1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/edsononildo/Desktop/PAQ/PAQTrabalho1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/edsononildo/Desktop/PAQ/PAQTrabalho1/cmake-build-debug/CMakeFiles/PAQTrabalho1.dir

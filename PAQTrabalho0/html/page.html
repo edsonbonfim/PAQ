@@ -1,0 +1,990 @@
+
+<!doctype html>
+<html ng-app="deliveryOnline" class="no-js" lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3bc801ee7d","applicationID":"72234243","transactionName":"M1VWZUFTXUtTWhUKCgofeWdwHXtXX1wiDAsQQltdX1dBF3tXBQYd","queueTime":0,"applicationTime":21,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+        <meta name="description" content="Pe&#231;a aqui sua Pizza Hut! Encontre nossas ofertas, card&#225;pios e lojas. Pe&#231;a para delivery ou para retirada. S&#243; Pizza Hut &#233; Pizza Hut.">
+
+				<script>
+					var _prum = [['id', '58cf1214e530ca39a4d0aed9'],
+					['mark', 'firstbyte', (new Date()).getTime()]];
+					(function () {
+						var s = document.getElementsByTagName('script')[0]
+							, p = document.createElement('script');
+						p.async = 'async';
+						p.src = '//rum-static.pingdom.net/prum.min.js';
+						s.parentNode.insertBefore(p, s);
+					})();
+				</script>
+
+
+
+    
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push(
+                { 'gtm.start': new Date().getTime(), event: 'gtm.js' }
+                ); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WFT9XX2');
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <title>Fa&#231;a seu Pedido Online | Pizza Hut Brasil</title>
+
+    <link rel="icon" type="image/ico" href="/Images/favicon.ico" />
+    <link href="/Content/pizzahut-css?v=Ds0BF-3CZKXLT-BTkEP39MVxMtD121s1_Q9BXKt7LdA1" rel="stylesheet"/>
+
+    <link href="/Content/themes/base/ContentBase-css?v=myqT7npwmF2ABsuSaHqt8SCvK8UFWpRv7T4M8r3kiK01" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-js?v=qVODBytEBVVePTNtSFXgRX0NCEjh9U_Oj8ePaSiRcGg1"></script>
+
+
+		<!-- Facebook Pixel Code -->
+		<script>
+			!function (f, b, e, v, n, t, s) {
+				if (f.fbq) return; n = f.fbq = function ()
+				{ n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+				if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+				n.queue = []; t = b.createElement(e); t.async = !0;
+				t.src = v; s = b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t, s)
+			}(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1830012200596641');
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1830012200596641&ev=PageView&noscript=1" />
+		</noscript>
+		<!-- End Facebook Pixel Code -->
+</head>
+
+
+
+<body class="home-bg">
+
+    <form style="display: none" action="/the/url" method="POST" id="form">
+        <input type="hidden" id="var1" name="var1" value="" />
+    </form>
+
+        <!-- Google Tag Manager (noscript) -->
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFT9XX2" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+            </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+            <script>
+                var pixelSRCType = (("https:" == document.location.protocol) ? "https://" : "http://");
+                var cId = '9c24af63-c1e3-4c48-b38a-9fc71fa70e80';
+                var tName = 'visit'; var pId = '16181922', revenue = '0', orderId = '0'; var p1 = '', p2 = '', p3 = '';
+                document.write("<iframe src='" + pixelSRCType + "adserver.adnexio.com/Tracking/EventHandler?cId=" + cId + "&tName=" + tName + "&pId=" + pId + "&revenue=" + revenue + "&orderId=" + orderId + "&p1=" + p1 + "&p2=" + p2 + "&p3=" + p3 + "' allowtransparency='true' framespacing='0' frameborder='no' scrolling='no' width='0' height='0' style='display:none;visibility:hidden'></iframe>");
+            </script>
+    <input type="hidden" id="applicationPath" name="applicationPath" value="" />
+    <div id="overlay" class="reveal-modal medium large mainModal static" data-reveal>
+        <div class="row">
+            <div class="small-12 large-12 columns large-centered">
+                
+            </div>
+        </div>
+    </div>
+    <div id="viewport" class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <div class="headerBg">
+    <div class="row" id="header">
+        <div class="showForMobileOnly fixed" id="dockedHeader">
+            <div class="small-3 medium-2 columns"> <a class="left-off-canvas-toggle button radius secondary" href="#" style="font-size:22px;padding: 2px 16px;">&#x2261;</a> </div>
+            <div class="small-6 medium-8 columns"> <a href="https://pizzahut.com.br/"><img src="https://pizzahut.com.br/Images/pizza-hut.png" alt="Pizza Hut" class="logo-mobile"></a> </div>
+
+            <div class="small-3 medium-2 columns" style="position: relative;">
+            </div>
+        </div>
+
+            <input type="hidden" id="userIsCallCenter" name="userIsCallCenter" value="" />
+        <div class="hideForMobileOnly">
+            <div class="columns medium-4">
+                <div class="row header-profile collapse">
+                        <div class="large-10 medium-9 columns profile">
+                            <p style="margin-top:10px;"><a href="https://pizzahut.com.br/MinhaConta/Cadastro">Crie sua conta</a><a href="https://pizzahut.com.br/MinhaConta/Login">Entrar</a></p>
+                        </div>
+                </div>
+            </div>
+            <div class="columns medium-4">
+                <a href="https://pizzahut.com.br/"> <img src="https://pizzahut.com.br/Images/pizza-hut-logo-min.png" alt="" width="180" id="logo" /> </a>
+            </div>
+            <div class="columns medium-4">
+                <div class="row">
+                    <div class="medium-12 columns shopping-cart text-right">
+                    </div>
+                </div>
+                <div class="relativeWrapper">
+                    <div id="wideDeletedFromCartTooltip" style="display:none;">
+                        <div class="tooltip" style="display:block;">
+                            <h3>Item removido do carrinho</h3>
+                            <span class="nub"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relativeWrapper">
+                    <div id="wideAddedToCartTooltip" style="display:none;">
+                        <div class="tooltip" style="display:block;">
+                            <h3>Adicionado ao pedido</h3>
+                            <div class="row">
+                                <div class="small-3 large-3 columns">
+                                    <div id="addedProductImage">
+
+                                    </div>
+                                </div>
+                                <div class="small-5 columns large-5">
+                                    <h4 id="addedProductName"></h4>
+                                    <p id="addedProductOptions" style="margin-bottom:0;">
+
+                                    </p>
+                                </div>
+                                <div class="small-4 large-4 columns">
+                                    <label id="addedProductValue">
+
+                                    </label>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-12 large-12 columns">
+                                    <p class="text-right" style="margin-bottom:0;">
+                                        <a id="addedCartButton" href="https://pizzahut.com.br/Carrinho" class="button radius" style="margin-bottom:0;">
+                                            Carrinho
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="nub"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="showForMobileOnly">
+
+    <p class="menu-name-mobile"></p>
+    <aside class="left-off-canvas-menu">
+        <div class="row">
+            <div class="small-12 columns">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                    <a href="https://pizzahut.com.br/MinhaConta/Cadastro" style="width:auto;padding-left:10px;padding-right:10px;" class=" button small radius">Crie sua conta</a>
+                    <a href="https://pizzahut.com.br/MinhaConta/Login" style="width:auto;padding-left:10px;padding-right:10px;" class="button small radius">Entrar</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <dl class="accordion" data-accordion>
+
+
+
+                    <dd class="accordion-navigation">
+                        <a href="#panel4">Institucional</a>
+                        <div id="panel4" class="content">
+                            <ul class="mobileNav sub-nav">
+                                <li>
+                                    <a href="http://institucional.pizzahut.com.br/" target="_blank">
+                                        Institucional
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://institucional.pizzahut.com.br/franquia-porque-nos" target="_blank">
+                                        Franquias
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://pizzahutpesquisa.com" target="_blank">
+                                        Pesquisa de Satisfação do Cliente
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://institucional.pizzahut.com.br/PIZZA-HUT" target="_blank">
+                                        PIZZA HUT
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://institucional.pizzahut.com.br/yum-brands" target="_blank">
+                                        YUM! Brands
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://institucional.pizzahut.com.br/curiosidades" target="_blank">
+                                        Curiosidades
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </dd>
+                    <dd class="accordion-navigation">
+                        <a href="#panel3">Consumidor</a>
+                        <div id="panel3" class="content">
+                            <ul class="mobileNav sub-nav">
+                                <li>
+                                    <a href="https://institucional.pizzahut.com.br/contato" target="_blank">
+                                        Fale Conosco
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://institucional.pizzahut.com.br/restaurantes" target="_blank">
+                                        Restaurantes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://pizzahut.com.br/Home/Termos" target="_blank">
+                                        Termos de uso
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="row hideForMobileOnly" id="globalNavWide">
+    <div class="large-12 columns">
+
+
+    </div>
+</div>
+
+            
+
+<div class="row" id="newHome">
+    <div class="small-12 large-6 medium-6 small-centered columns resizePanelBox" id="addressSearchDiv" style="padding-top: 0px;">
+        <div class="cepSearch panel">
+                <h3 class="text-center"> Onde você quer a sua pizza? </h3>
+                <a class="button radius small expand fullWidthButtons" id="useLocation"> USAR MINHA LOCALIZAÇÃO</a>
+
+            <div class="row" id="zipCodeSearchDiv">
+    <div class="large-12 columns">
+        <p>ou informe o CEP</p>
+
+        <div class="row collapse">
+            <div class="small-7 columns">
+                <input type="text" placeholder="CEP" id="zipCode" class="numeric cep">
+            </div>
+            <div class="small-5 columns">
+                <a href="https://pizzahut.com.br/Home/BuscarCEP" class="button radius postfix findAddressDisabled" id="FindAddress">BUSCAR</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="row">&nbsp;</div>
+            
+                <hr />
+                <a href="https://institucional.pizzahut.com.br/restaurantes.asp" target="_blank" class="button radius small expand fullWidthButtons" id="restaurant-list">VEJA NOSSAS LOJAS!</a>
+        </div>
+    </div>
+</div>
+
+
+            
+
+<div id="footer">
+    <div id="alertMessageModal" class="reveal-modal medium alertModal messageModal">
+        <a class="close-reveal-messageModal" onclick="hideMessage(event)">&#215;</a>
+        <div class="row">
+            <div class="small-12 large-12 columns TextoMensagem" id="messageTextDiv">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 large-4 columns">&nbsp;</div>
+            <div class="small-4 large-4 columns">
+                <a href="#" class="button-messageModal button radius small" onclick="hideMessage(event)">OK</a>
+            </div>
+            <div class="small-4 large-4 columns">
+            </div>
+        </div>
+    </div>
+    <div id="confirmationMessageModalToDeleteDish" class="reveal-modal medium alertModal messageModal">
+        <a class="close-reveal-messageModal" onclick="hideConfirmationMessage(event)">&#215;</a>
+        <div class="row">
+            <div class="small-12 large-12 columns TextoMensagem" id="confirmationMessageTextDiv">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 large-4 columns small-offset-2">
+                <a href="#" class="button-messageModal button radius small" onclick="hideConfirmationMessage(event)">Cancelar</a>
+            </div>
+            <div class="small-4 large-4 columns">
+                <a href="#" class="button-messageModal button radius small" id="confirmConfirmationModal" data-id="">OK</a>
+            </div>
+            <div class="small-4 large-4 columns">
+            </div>
+        </div>
+    </div>
+    <div id="confirmationMessageToIncludeOrderDeliveryFee" class="reveal-modal medium alertModal messageModal">
+        <a class="close-reveal-messageModal" id="closeYesNoModal">&#215;</a>
+        <div class="row">
+            <div class="small-12 large-12 columns TextoMensagem" id="YesNoMessageTextDiv">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 large-4 columns small-offset-2">
+                <a href="#" class="button-messageModal button radius small" id="confirmYesModal" data-id="">Sim</a>
+            </div>
+            <div class="small-4 large-4 columns">
+                <a href="#" class="button-messageModal button radius small" id="confirmNoModal">Não</a>
+            </div>
+            <div class="small-4 large-4 columns">
+            </div>
+        </div>
+    </div>
+    <div class="alertbg" style="display: none;"></div>
+        <a class="exit-off-canvas"></a>
+        <div class="row">
+            <div class="tabletWideOnly-8 small-12 columns hideForMobileOnly">
+                <div class="row">
+                    <div class="small-3 large-3 columns">
+                        <a href="http://institucional.pizzahut.com.br/PIZZA-HUT" target="_blank">
+                            <h6>
+                                Institucional
+                            </h6>
+                        </a>
+                        <a href="https://institucional.pizzahut.com.br/restaurantes.asp" target="_blank">
+                            <h6>
+                                Restaurantes
+                            </h6>
+                        </a>
+                        <a href="http://institucional.pizzahut.com.br/contato" target="_blank">
+                            <h6>
+                                Fale Conosco
+                            </h6>
+                        </a>
+                        <a href="https://pizzahut.com.br/Home/Termos" target="_blank">
+                            <h6>
+                                Termos de uso
+                            </h6>
+                        </a>
+                    </div>
+                    <div class="small-3 large-3 columns"> </div>
+                </div>
+            </div>
+            <div class="small-12 large-4 columns">
+                <div class="row">
+                    <div class="small-12 columns hideForMobileOnly" style="padding-left:0;">
+                        <h6>Conecte-se com a Pizza Hut</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="socialFooter small-12 columns">
+                        <div class="row">
+                            <div class="small-12 medium-4 large-8 column">
+                                <div class="socialButtonFooter">
+                                       <div class="small-12 medium-12 large-12 columns">
+                                           <ul class="small-block-grid-3">
+                                               <li class="text-center" >
+                                                   <a href="https://www.facebook.com/pizzahutbrasil" target="_blank"><i class="social-facebook"></i></a>
+                                               </li>
+                                               <li class="text-center" >
+                                                   <a href="https://www.instagram.com/pizzahutbrasil/" target="_blank"><i class="social-instagram"></i> </a>
+                                               </li>
+                                               <li class="text-center">
+                                                   <a href="https://www.youtube.com/user/PizzaHutBrasil/" target="_blank"><i class="social-youtube"></i></a>
+                                               </li>
+                                           </ul>
+                                      </div>
+                                </div>
+                            </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <div class="columns small-12 large-12">
+                <hr>
+                <p class="text-center legal">
+                    <small>
+                        Yum! Restaurantes do Brasil Ltda - 
+                        CNPJ 02.469.596/0001-07 - 
+                        Avenida das Nações Unidas, 8501 - Andar 7 71 A Edifício Eldorado Business Tower - Pinheiros - São Paulo / SP
+                    </small>
+                        <small style="color: transparent">
+                            16181922
+                        </small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+    <div id="pingdom"></div>
+<script src="/Scripts/default-js?v=sGt_vi6mSn1W0HQQFU7lP6-6W7VztJ5ZjqiaDRVECUk1"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+
+<script src="/Scripts/pizzahut-js?v=ArxjD0Zw_fdUp1JHdf-EDI2mFhnxm9G3IDamc1Cuh001"></script>
+
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCnRFpFwLM6yplkcDC8i7yyXnumlxrQ2F8&sensor=false"></script>
+    <script>
+        Globalize.culture = Globalize.cultures['pt-BR'];
+
+        $.validator.methods.range = function (value, element, param) {
+            var globalizedValue = value.replace(",", ".");
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        }
+
+        $.validator.methods.number = function (value, element) {
+            if (value == "" || Globalize.parseFloat(value, null, Globalize.culture)) {
+                return true;
+            }
+
+            if (parseFloat(value).toString() != "NaN") {
+                return true;
+            }
+
+            return false;
+        }
+
+        $.validator.methods.date = function (value, element) {
+            if (value == "" || parseDateByFormat(value) != null) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function updateNewHomeHeight(scrollToTop) {
+            var newHome = $('#newHome');
+            var windowHeight = $(window).innerHeight();
+
+            if (newHome != null) {
+                var headerHeigth = $('.headerBg').height();
+                var newHomeHeight = newHome.height();
+                var hutLoversHeigth = $('#hutLovers').height();
+                var footerPaddingTop = parseInt($('#footer').css('padding-top'));
+                var headerMargingBottom = parseInt($('#header').css('margin-bottom'));
+                var savedAddressesHeigth = $('.resizePanelBox:visible').height();
+                var boxPadding = 100;
+                var menuBarHeigth = $('#startYourOrderNav').height();
+
+                if (menuBarHeigth == null || menuBarHeigth == undefined) {
+                    menuBarHeigth = 0;
+                }
+
+                if ((savedAddressesHeigth + headerHeigth + hutLoversHeigth + footerPaddingTop + boxPadding + menuBarHeigth) < windowHeight) {
+                    newHome.height(windowHeight - headerHeigth - hutLoversHeigth - footerPaddingTop - headerMargingBottom - menuBarHeigth);
+                }
+                else {
+                    newHome.height('auto');
+                }
+
+                if (scrollToTop == null || scrollToTop) {
+                    $(window).scrollTop(0);
+                }
+            }
+        }
+
+        function resetUseLocationBtn() {
+            $('#useLocation').empty();
+            $('#useLocation').text("USAR MINHA LOCALIZAÇÃO");
+        }
+
+        function putLoadingGif($element) {
+            var $loadingGif = $('<img src="' + 'https://pizzahut.com.br/Images/ajax-loader.gif' + '">');
+            $element.html($loadingGif);
+        }
+
+        function removeLoadingGif($element) {
+            $element.html($element.data("default-value"));
+        }
+
+        function putBtnLoadingGif($element) {
+            $element.addClass("btnLoading");
+            $element.val("");
+        }
+
+        function removeBtnLoadingGif($element) {
+            $element.removeClass("btnLoading");
+            $element.val($element.data("default-value"));
+        }
+
+        $(document).ready(function () {
+            $(document).ajaxComplete(function (event, xhr, settings) {
+                var scollToTop = settings.url.toLowerCase().indexOf("Menu?IdMenuGroup") == -1;
+                updateNewHomeHeight(!scollToTop);
+                $("body").css("cursor", "default");
+            });
+
+            $('.numeric').mask('00000000', { reverse: true });
+
+
+            $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+                if (jqxhr.responseText.indexOf("SessionExpiredException") >= 0) {
+                    showAjaxErrorMessage("Sua sessão expirou! Por favor comece novamente.");
+                }
+                else
+                {
+                    window.location = 'https://pizzahut.com.br/';
+                }
+            });
+
+            $('#submitNewsletterForm').click(function (event) {
+                event.preventDefault();
+
+                if ($('#NewsletterForm').valid()) {
+                    $.post($('#NewsletterForm').attr('action'), $('#NewsletterForm').serialize(), function (result) {
+                        $('#Newsletter_Name').val('');
+                        $('#Newsletter_Email').val('');
+
+                        if (!result) {
+                            showMessage('Parabéns, você foi cadastrado com sucesso!');
+                        } else {
+                            showMessage(result);
+                        }
+                    });
+                }
+            });
+
+            $(".styledCheckbox").on("click", function () {
+                $(this).toggleClass("checked");
+            });
+
+            $('.radioClickImage').click(function (event) {
+                $(this).next().click();
+            });
+
+
+            $('#useLocation').click(function (event) {
+                event.preventDefault();
+                putLoadingGif($(this));
+                var latitude, longitude;
+
+                try {
+                    getLocation(function getPosition(position) {
+                        latitude = position.coords.latitude.toString().replace('.', ',');
+                        longitude = position.coords.longitude.toString().replace('.', ',');
+
+                        window.location = 'https://pizzahut.com.br/Home/UsarMinhaLocalizacao' + '?latitude=' + latitude + '&longitude=' + longitude;
+                    });
+                } catch (err) {
+                    resetUseLocationBtn();
+                }
+            });
+
+            $('#modelRequest_ZipCode').blur(function (event) {
+                event.preventDefault();
+                fillAddressByZipCode($('#modelRequest_ZipCode').val());
+            });
+
+            $('#modelRequest_ZipCode').keypress(function (e) {
+                var key = e.which;
+
+                if (key == 13) {
+                    event.preventDefault();
+                    fillAddressByZipCode($('#modelRequest_ZipCode').val());
+                }
+            });
+
+            $('#header').on('click', '#addedCartButton', function (event) {
+                $("body").css("cursor", "progress");
+            });
+        });
+
+        function zipCodeKeyUp(e, zipCode, $findAddressBtn) {
+            if (zipCode == '' || zipCode.length != 8) {
+                $findAddressBtn.addClass('findAddressDisabled');
+            } else {
+                $findAddressBtn.removeClass('findAddressDisabled');
+                var key = e.which;
+
+                if (key == 13) {
+                    $findAddressBtn.click();
+                }
+            }
+        }
+
+        function searchForZipCode(zipCode) {
+            if (zipCode != '' && zipCode != null && zipCode.length == 8) {
+                var address = getAddressByZipCode(zipCode);
+                return address;
+            }
+
+            return null;
+        }
+
+        function parseDateByFormat(value) {
+            if (value == null || value.length < 6) {
+                return null;
+            }
+
+            var culture = Globalize.culture;
+            var format;
+
+            if (value.length > 10) {
+                format = culture.calendar.patterns.d + " " + culture.calendar.patterns.T;
+            } else {
+                format = culture.calendar.patterns.d;
+            }
+
+            return Globalize.parseDate(value, format, culture);
+        }
+
+        function getLocation(getPositionCallBack) {
+            if (!getPositionCallBack) {
+                return;
+            }
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(getPositionCallBack, showError);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    console.log("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    console.log("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    console.log("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    console.log("An unknown error occurred.");
+                    break;
+            }
+        }
+
+        function clearCustomer() {
+            $.ajax({
+                url: "https://pizzahut.com.br/Customer/ClearCustomer",
+                type: 'GET',
+                success: function (result) { },
+                async: false
+            });
+        }
+
+        function createCompleteAddressForm(formInfo) {
+            var $form = $('<form action="' + 'https://pizzahut.com.br/Home/CompleteSeuEndereco' + '" method="post" style="display:none">' +
+                    '<input type="text" name="Neighborhood" value="' + formInfo.neighborhoodInfo + '" />' +
+                    '<input type="text" name="ZipCode" value="' + formInfo.zipCodeInfo + '" />' +
+                    '<input type="text" name="Address" value="' + formInfo.addressInfo + '" />' +
+                    '<input type="text" name="City" value="' + formInfo.cityInfo + '" />' +
+                    '<input type="text" name="StateCode" value="' + formInfo.stateInfo + '" />' +
+                    '<input type="text" name="CoordinateData.Latitude" value="' + formInfo.latitudeInfo + '" />' +
+                    '<input type="text" name="CoordinateData.Longitude" value="' + formInfo.longitudeInfo + '" />' +
+                    '<input type="text" name="GenericAddress" value="' + formInfo.genericAddress + '" />' +
+                    '</form>');
+
+            return $form;
+        }
+
+        var redirectCepNotAttended = false;
+        var addressNotAttendedMessage = "Nenhum restaurante que atende a sua localização foi encontrado para pedidos online.";
+        var lastZipCodeSearchNotAttended = null;
+
+        function checkAddressAttended(zipCode) {
+            var isAttended = true;
+
+            if (zipCode == lastZipCodeSearchNotAttended) {
+                event.preventDefault();
+                showMessage(addressNotAttendedMessage);
+                isAttended = false;
+            }
+
+            $.ajax({
+                url: "https://pizzahut.com.br/Customer/IsAddressAttended",
+                data: { zipCode: zipCode },
+                type: 'GET',
+                success: function (result) {
+                    if (!result) {
+                        event.preventDefault();
+                        lastZipCodeSearchNotAttended = zipCode;
+                        showMessage(addressNotAttendedMessage);
+                        isAttended = false;
+                    }
+                },
+                async: false
+            });
+
+            return isAttended;
+        }
+
+        function postZipCodeSearch(zipCode, mustClearCustomer) {
+            var address = searchForZipCode(zipCode);
+
+            if (address) {
+                var userIsCallCenter = $('#userIsCallCenter').val();
+
+                if (userIsCallCenter == 'userIsCallCenter' && mustClearCustomer) {
+                    clearCustomer();
+                }
+
+                if (redirectCepNotAttended && !address.IsAttended) {
+                    showMessage(addressNotAttendedMessage);
+                    return;
+                }
+
+                var formInfo = {
+                    neighborhoodInfo: address.Neighborhood,
+                    zipCodeInfo: address.ZipCode,
+                    addressInfo: address.Address,
+                    cityInfo: address.City,
+                    stateInfo: address.StateCode,
+                    latitudeInfo: address.Latitude,
+                    longitudeInfo: address.Longitude,
+                    genericAddress: address.Address == null || address.Address.trim() == ""
+                };
+
+                var $form = createCompleteAddressForm(formInfo);
+                $('body').append($form);
+                $form.submit();
+            } else {
+                showMessage("O CEP informado não foi encontrado.");
+            }
+        }
+
+        function getAddressByZipCode(zipCode) {
+            if (zipCode == null || zipCode == '') {
+                return;
+            }
+            else if (!zipCode.trim()) {
+                return;
+            }
+
+            var address = null;
+
+            $.ajax({
+                url: "https://pizzahut.com.br/Home/BuscarCEP",
+                data: { zipCode: zipCode },
+                type: 'GET',
+                success: function (result) {
+                    if (result) {
+                        address = result.address;
+                        redirectCepNotAttended = result.redirectCepNotAttended;
+                    }
+                    else {
+                        showMessage('CEP não encontrado.');
+                    }
+                },
+                async: false
+            });
+
+            return address;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function fillAddressByZipCode(zipCode) {
+            if (zipCode == '' || zipCode == null) {
+                return;
+            }
+            else if (!zipCode.trim()) {
+                return;
+            }
+
+            var zipCodeFound;
+
+            $.ajax({
+                url: "https://pizzahut.com.br/Home/BuscarCEP",
+                data: { zipCode: zipCode.trim() },
+                type: 'GET',
+                success: function (result) {
+                    if (result) {
+                        $('#modelRequest_City').val(result.address.City);
+                        if (result.address.Address) {
+                            $('#modelRequest_Address').prop('readonly', true);
+                        } else {
+                            $('#modelRequest_Address').prop('readonly', false);
+                        }
+
+                        $('#modelRequest_Address').val(result.address.Address);
+
+                        if (result.address.Neighborhood) {
+                            $('#modelRequest_Neighborhood').prop('readonly', true);
+                        } else {
+                            $('#modelRequest_Neighborhood').prop('readonly', false);
+                        }
+
+                        $('#modelRequest_Neighborhood').val(result.address.Neighborhood);
+                        $('#modelRequest_StateCode').val(result.address.StateCode);
+                        $('#modelRequest_CoordinateData_Latitude').val('');
+                        $('#modelRequest_CoordinateData_Longitude').val('');
+                        $('#modelRequest_IsSpecialAddress').val(result.address.IsSpecialAddress);
+                        zipCodeFound = true;
+                    }
+                    else {
+                        showMessage('CEP não encontrado.');
+                        $('#modelRequest_City').val('');
+                        $('#modelRequest_Address').val('');
+                        $('#modelRequest_Neighborhood').val('');
+                        $('#modelRequest_StateCode').val('');
+                        $('#modelRequest_IsSpecialAddress').val();
+                        zipCodeFound = false;
+                    }
+                },
+                async: false
+            });
+
+            return zipCodeFound;
+        }
+
+    </script>
+    
+<script>   
+    $(document).ready(function () {
+        updateNewHomeHeight();
+
+		$(window).resize(function () {
+			updateNewHomeHeight();
+		});
+
+		var SPMaskBehavior = function (val) {
+			return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+		},
+        spOptions = {
+        	clearIfNotMatch: true,
+        	onKeyPress: function (val, e, field, options) {
+        		field.mask(SPMaskBehavior.apply({}, arguments), options);
+        	}
+        };
+
+		$('.phone').mask(SPMaskBehavior, spOptions);
+		$('.cpf').mask('000.000.000-00', { reverse: true });
+
+		if ($('#zipCode').val().length == 8) {
+			$('#FindAddress').removeClass('findAddressDisabled');
+		}
+
+		$('#zipCode').focus();
+
+		$('#FindAddress').on('click', function (event) {
+			event.preventDefault();
+
+			var zipCode = $('#zipCode').val();
+
+			postZipCodeSearch(zipCode, true);
+		});
+
+		$('#myAddressListBtn').bind('click', function (event) {
+					$("#loadingToGoOrDelivery").hide();
+					$("#startedToGoOrDelivery").val('');
+			putLoadingGif($(this));
+		});
+
+		
+		$('#addressSearchDiv').on('click', '#findCustomerBtn', function (event) {
+			putLoadingGif($(this));
+
+			try {
+				var phoneNumber = $('#PhoneNumber').val();
+				var email = $('#Email').val();
+				var documentNumber = $('#DocumentNumber').val();
+
+				if (phoneNumber == '' && email == '' && documentNumber == '') {
+				    event.preventDefault();
+
+				    resetFindCustomerBtn();
+
+					showMessage('É obrigatório o preenchimento de um parâmetro para busca.');
+				}
+				else if ($('#Email').hasClass('input-validation-error') || $('#DocumentNumber').hasClass('input-validation-error')) {
+				    event.preventDefault();
+
+					resetFindCustomerBtn();
+				}
+				else {
+				    var $findCustomerForm = $('#FindCustomerForm');
+				    $findCustomerForm.submit();
+				}
+			} catch (err) {
+				resetFindCustomerBtn();
+			}
+		});
+
+		$('#zipCode').keyup(function (e) {
+			var $findAddressBtn = $('#addressSearchDiv #FindAddress');
+			var zipCode = $(this).val();
+
+			zipCodeKeyUp(e, zipCode, $findAddressBtn);
+		});
+
+		$('#findCustomerDiv').on('keyup', '#PhoneNumber', function (event) {
+			event.preventDefault();
+			customerSearchKeyUp(event.which);
+		});
+
+		$('#findCustomerDiv').on('keyup', '#Email', function (event) {
+			event.preventDefault();
+			customerSearchKeyUp(event.which);
+		});
+
+		$('#findCustomerDiv').on('keyup', '#DocumentNumber', function (event) {
+			event.preventDefault();
+			customerSearchKeyUp(event.which);
+		});
+	});
+
+	function customerSearchKeyUp(key) {
+		var $findCustomerBtn = $('#findCustomerDiv #findCustomerBtn');
+
+		if (key == 13) {
+			$findCustomerBtn.click();
+		}
+	}
+	
+    function resetOrderNowBtn() {
+        $('#customerOrderNowIndexBtn').empty();
+        $('#customerOrderNowIndexBtn').text("PEÇA JÁ");
+    }
+
+    function resetMyAddressListBtn() {
+        $('#myAddressListBtn').empty();
+        $('#myAddressListBtn').text("MEUS ENDEREÇOS");
+    }
+ 
+    function resetFindCustomerBtn() {
+        $('#findCustomerBtn').empty();
+        $('#findCustomerBtn').text("BUSCAR CLIENTE");
+    }
+</script>
+
+    <!--<script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '256566174695013',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.3'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.async = true; js.src = "//connect.facebook.net/pt_BR/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'))
+    </script>-->
+
+</body>
+</html>
